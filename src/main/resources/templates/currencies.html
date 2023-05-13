@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/XSL/Transform">
+<head>
+    <meta charset="UTF-8">
+    <title>Currencies</title>
+</head>
+<body style="text-align:center">
+<h1>Available currencies:</h1>
+<div th:each="currency : ${list}">
+    <a th:href="@{/currencies/{symbol}(symbol=${currency})}" th:text="${currency}"></a>
+</div>
+</body>
+</html>
